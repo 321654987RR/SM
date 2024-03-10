@@ -1,0 +1,27 @@
+
+GraphicsWindow.BackgroundColor = "Black"
+GraphicsWindow.PenColor = "White"
+GraphicsWindow.MouseDown = OnMouseDown
+GraphicsWindow.MouseMove = OnMouseMove
+GraphicsWindow.KeyDown = OnKeyDown
+red=Controls.AddButton("RED", 1, 1)
+blue=Controls.AddButton("BLUE", 40, 1)
+green=Controls.AddButton("GREEN", 85, 1)
+Controls.
+Sub OnKeyDown
+EndSub
+
+Sub OnMouseDown
+  prevX = GraphicsWindow.MouseX
+  prevY = GraphicsWindow.MouseY
+EndSub
+
+Sub OnMouseMove
+  x = GraphicsWindow.MouseX
+  y = GraphicsWindow.MouseY
+  If (Mouse.IsLeftButtonDown) then
+    GraphicsWindow.DrawLine(prevX, prevY, x, y)
+  endif
+  prevX = x
+  prevY = y
+EndSub
