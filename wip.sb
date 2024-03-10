@@ -25,3 +25,6 @@ Sub OnMouseMove
   prevX = x
   prevY = y
 EndSub
+
+
+a=3
